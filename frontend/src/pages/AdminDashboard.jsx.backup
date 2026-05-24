@@ -1,0 +1,184 @@
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+import { 
+  Users, Vote, Calendar, Shield, BarChart3, 
+  AlertTriangle, CheckCircle, Clock, Plus 
+} from 'lucide-react'
+import api from '../utils/api'
+import toast from 'react-hot-toast'
+
+const AdminDashboard = () => {
+  const [stats, setStats] = useState(null)
+  const [recentActivity, setRecentActivity] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    fetchDashboardData()
+  }, [])
+
+  const fetchDashboardData = async () => {
+    try {
+      const [statsRes, activityRes] = await Promise.all([
+        api.get('/admin/dashboard/stats'),
+        api.get('/audit/logs?per_page=10')
+      ])
+
+      if (statsRes.data.success) {
+        setStats(statsRes.data.data)
+      }
+      if (activityRes.data.success) {
+        setRecentActivity(activityRes.data.data)
+      }
+    } catch (error) {
+      toast.error('Failed to load dashboard data')
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin h-8 w-8 border-4 border-ican-primary border-t-transparent rounded-full" />
+      </div>
+    )
+  }
+
+  return (
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
+        <h1 className="text-3xl font-bold text-ican-primary dark:text-white">Admin Dashboard</h1>
+        <div className="mt-4 md:mt-0 flex space-x-2">
+          <Link to="/elections" className="btn-primary flex items-center text-sm">
+            <Plus className="h-4 w-4 mr-2" />
+            Create Election
+          </Link>
+        </div>
+      </div>
+
+      {/* Stats Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <AdminStatCard 
+          icon={<Users className="h-6 w-6" />}
+          title="Total Users"
+          value={stats?.users?.total || 0}
+          breakdown={[
+            { label: 'Active', value: stats?.users?.active || 0, color: 'text-green-500' },
+            { label: 'Pending', value: stats?.users?.pending || 0, color: 'text-yellow-500' },
+            { label: 'Suspended', value: stats?.users?.suspended || 0, color: 'text-red-500' },
+          ]}
+        />
+        <AdminStatCard 
+          icon={<Vote className="h-6 w-6" />}
+          title="Elections"
+          value={stats?.elections?.total || 0}
+          breakdown={[
+            { label: 'Active', value: stats?.elections?.active || 0, color: 'text-green-500' },
+            { label: 'Scheduled', value: stats?.elections?.scheduled || 0, color: 'text-blue-500' },
+            { label: 'Completed', value: stats?.elections?.completed || 0, color: 'text-gray-500' },
+          ]}
+        />
+        <AdminStatCard 
+          icon={<Users className="h-6 w-6" />}
+          title="Candidates"
+          value={stats?.candidates?.total || 0}
+          breakdown={[
+            { label: 'Approved', value: stats?.candidates?.approved || 0, color: 'text-green-500' },
+            { label: 'Pending', value: stats?.candidates?.pending || 0, color: 'text-yellow-500' },
+          ]}
+        />
+        <AdminStatCard 
+          icon={<Shield className="h-6 w-6" />}
+          title="Security"
+          value="OK"
+          breakdown={[
+            { label: 'Status', value: 'Secure', color: 'text-green-500' },
+          ]}
+        />
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Recent Activity */}
+        <div className="card p-6">
+          <h2 className="text-xl font-bold text-ican-primary dark:text-white mb-4">Recent Activity</h2>
+          <div className="space-y-3">
+            {recentActivity.map((log, index) => (
+              <div key={index} className="flex items-start space-x-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-800">
+                {log.action?.includes('LOGIN') ? <Shield className="h-5 w-5 text-blue-500 mt-0.5" /> :
+                 log.action?.includes('VOTE') ? <Vote className="h-5 w-5 text-green-500 mt-0.5" /> :
+                 log.action?.includes('FRAUD') ? <AlertTriangle className="h-5 w-5 text-red-500 mt-0.5" /> :
+                 <Clock className="h-5 w-5 text-gray-500 mt-0.5" />}
+                <div className="flex-1">
+                  <p className="text-sm font-medium text-gray-900 dark:text-white">{log.action}</p>
+                  <p className="text-xs text-gray-500">{log.action_description}</p>
+                  <p className="text-xs text-gray-400 mt-1">{new Date(log.created_at).toLocaleString()}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <Link to="/audit" className="mt-4 text-ican-primary hover:text-ican-secondary text-sm font-medium flex items-center">
+            View All Logs
+          </Link>
+        </div>
+
+        {/* Quick Actions */}
+        <div className="card p-6">
+          <h2 className="text-xl font-bold text-ican-primary dark:text-white mb-4">Quick Actions</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <QuickActionCard 
+              icon={<Users className="h-6 w-6" />}
+              title="Manage Users"
+              description="View and manage member accounts"
+              to="/admin/users"
+            />
+            <QuickActionCard 
+              icon={<Calendar className="h-6 w-6" />}
+              title="Elections"
+              description="Create and manage elections"
+              to="/elections"
+            />
+            <QuickActionCard 
+              icon={<CheckCircle className="h-6 w-6" />}
+              title="Candidates"
+              description="Approve or reject nominations"
+              to="/candidates"
+            />
+            <QuickActionCard 
+              icon={<BarChart3 className="h-6 w-6" />}
+              title="Analytics"
+              description="View election analytics"
+              to="/observer"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+const AdminStatCard = ({ icon, title, value, breakdown }) => (
+  <div className="card p-6">
+    <div className="flex items-center justify-between mb-4">
+      <div className="p-2 bg-ican-light dark:bg-gray-700 rounded-lg text-ican-primary">{icon}</div>
+      <span className="text-2xl font-bold text-ican-primary dark:text-white">{value}</span>
+    </div>
+    <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{title}</h3>
+    <div className="flex space-x-4 text-sm">
+      {breakdown?.map((item, index) => (
+        <span key={index} className={item.color}>
+          {item.label}: {item.value}
+        </span>
+      ))}
+    </div>
+  </div>
+)
+
+const QuickActionCard = ({ icon, title, description, to }) => (
+  <Link to={to} className="p-4 rounded-lg border border-gray-200 hover:border-ican-primary hover:bg-ican-light transition-colors dark:border-gray-700 dark:hover:border-ican-primary">
+    <div className="text-ican-primary mb-2">{icon}</div>
+    <h3 className="font-semibold text-gray-900 dark:text-white">{title}</h3>
+    <p className="text-sm text-gray-500 dark:text-gray-400">{description}</p>
+  </Link>
+)
+
+export default AdminDashboard

@@ -1,0 +1,1062 @@
+2026-05-21 10:34:02,210 - app - ERROR - Exception on /api/auth/login [POST]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\auth.py", line 304, in login
+    'phone_verified': user.is_phone_verified
+AttributeError: 'User' object has no attribute 'is_phone_verified'
+2026-05-21 10:34:02,217 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-21 10:34:16,565 - app - ERROR - Exception on /api/auth/login [POST]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\auth.py", line 304, in login
+    'phone_verified': user.is_phone_verified
+AttributeError: 'User' object has no attribute 'is_phone_verified'
+2026-05-21 10:34:16,569 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-21 10:44:07,213 - app - ERROR - Exception on /api/auth/login [POST]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\auth.py", line 308, in login
+    access_token = create_access_token(
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\utils.py", line 174, in create_access_token
+    jwt_manager = get_jwt_manager()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\internal_utils.py", line 31, in get_jwt_manager
+    raise RuntimeError(
+RuntimeError: You must initialize a JWTManager with this flask application before using this method
+2026-05-21 10:44:07,222 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-21 12:04:41,922 - app - ERROR - Exception on /api/admin/users/bb837bda-09b6-4941-8d02-f8982076fcf7 [DELETE]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\admin.py", line 25, in wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\admin.py", line 306, in delete_user
+    action=AuditAction.USER_DELETED,
+  File "C:\Program Files\Python310\lib\enum.py", line 429, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: USER_DELETED
+2026-05-21 12:04:41,932 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-21 14:24:57,132 - app - ERROR - Exception on /api/elections/ [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1609, in _object_value_for_elem
+    return self._object_lookup[elem]
+KeyError: 'scheduled'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\elections.py", line 60, in list_elections
+    pagination = query.order_by(Election.start_date.desc()).paginate(
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_sqlalchemy\query.py", line 98, in paginate
+    return QueryPagination(
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_sqlalchemy\pagination.py", line 72, in __init__
+    items = self._query_items()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_sqlalchemy\pagination.py", line 358, in _query_items
+    out = query.limit(self.per_page).offset(self._query_offset).all()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\orm\query.py", line 2673, in all
+    return self._iter().all()  # type: ignore
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 1769, in all
+    return self._allrows()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 548, in _allrows
+    rows = self._fetchall_impl()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 1676, in _fetchall_impl
+    return self._real_result._fetchall_impl()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 2270, in _fetchall_impl
+    return list(self.iterator)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\orm\loading.py", line 219, in chunks
+    fetch = cursor._raw_all_rows()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 541, in _raw_all_rows
+    return [make_row(row) for row in rows]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 541, in <listcomp>
+    return [make_row(row) for row in rows]
+  File "lib\\sqlalchemy\\cyextension\\resultproxy.pyx", line 22, in sqlalchemy.cyextension.resultproxy.BaseRow.__init__
+  File "lib\\sqlalchemy\\cyextension\\resultproxy.pyx", line 79, in sqlalchemy.cyextension.resultproxy._apply_processors
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1729, in process
+    value = self._object_value_for_elem(value)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1611, in _object_value_for_elem
+    raise LookupError(
+LookupError: 'scheduled' is not among the defined enum values. Enum name: electionstatus. Possible values: DRAFT, SCHEDULED, ACTIVE, ..., COMPLETED
+2026-05-21 14:24:57,160 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-21 14:24:57,165 - app - ERROR - Exception on /api/elections/ [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1609, in _object_value_for_elem
+    return self._object_lookup[elem]
+KeyError: 'scheduled'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\elections.py", line 60, in list_elections
+    pagination = query.order_by(Election.start_date.desc()).paginate(
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_sqlalchemy\query.py", line 98, in paginate
+    return QueryPagination(
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_sqlalchemy\pagination.py", line 72, in __init__
+    items = self._query_items()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_sqlalchemy\pagination.py", line 358, in _query_items
+    out = query.limit(self.per_page).offset(self._query_offset).all()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\orm\query.py", line 2673, in all
+    return self._iter().all()  # type: ignore
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 1769, in all
+    return self._allrows()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 548, in _allrows
+    rows = self._fetchall_impl()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 1676, in _fetchall_impl
+    return self._real_result._fetchall_impl()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 2270, in _fetchall_impl
+    return list(self.iterator)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\orm\loading.py", line 219, in chunks
+    fetch = cursor._raw_all_rows()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 541, in _raw_all_rows
+    return [make_row(row) for row in rows]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 541, in <listcomp>
+    return [make_row(row) for row in rows]
+  File "lib\\sqlalchemy\\cyextension\\resultproxy.pyx", line 22, in sqlalchemy.cyextension.resultproxy.BaseRow.__init__
+  File "lib\\sqlalchemy\\cyextension\\resultproxy.pyx", line 79, in sqlalchemy.cyextension.resultproxy._apply_processors
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1729, in process
+    value = self._object_value_for_elem(value)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1611, in _object_value_for_elem
+    raise LookupError(
+LookupError: 'scheduled' is not among the defined enum values. Enum name: electionstatus. Possible values: DRAFT, SCHEDULED, ACTIVE, ..., COMPLETED
+2026-05-21 14:24:57,174 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-21 14:25:33,253 - app - ERROR - Exception on /api/elections/ [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1609, in _object_value_for_elem
+    return self._object_lookup[elem]
+KeyError: 'scheduled'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\elections.py", line 60, in list_elections
+    pagination = query.order_by(Election.start_date.desc()).paginate(
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_sqlalchemy\query.py", line 98, in paginate
+    return QueryPagination(
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_sqlalchemy\pagination.py", line 72, in __init__
+    items = self._query_items()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_sqlalchemy\pagination.py", line 358, in _query_items
+    out = query.limit(self.per_page).offset(self._query_offset).all()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\orm\query.py", line 2673, in all
+    return self._iter().all()  # type: ignore
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 1769, in all
+    return self._allrows()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 548, in _allrows
+    rows = self._fetchall_impl()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 1676, in _fetchall_impl
+    return self._real_result._fetchall_impl()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 2270, in _fetchall_impl
+    return list(self.iterator)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\orm\loading.py", line 219, in chunks
+    fetch = cursor._raw_all_rows()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 541, in _raw_all_rows
+    return [make_row(row) for row in rows]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 541, in <listcomp>
+    return [make_row(row) for row in rows]
+  File "lib\\sqlalchemy\\cyextension\\resultproxy.pyx", line 22, in sqlalchemy.cyextension.resultproxy.BaseRow.__init__
+  File "lib\\sqlalchemy\\cyextension\\resultproxy.pyx", line 79, in sqlalchemy.cyextension.resultproxy._apply_processors
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1729, in process
+    value = self._object_value_for_elem(value)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1611, in _object_value_for_elem
+    raise LookupError(
+LookupError: 'scheduled' is not among the defined enum values. Enum name: electionstatus. Possible values: DRAFT, SCHEDULED, ACTIVE, ..., COMPLETED
+2026-05-21 14:25:33,262 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-21 14:25:33,268 - app - ERROR - Exception on /api/elections/ [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1609, in _object_value_for_elem
+    return self._object_lookup[elem]
+KeyError: 'scheduled'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\elections.py", line 60, in list_elections
+    pagination = query.order_by(Election.start_date.desc()).paginate(
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_sqlalchemy\query.py", line 98, in paginate
+    return QueryPagination(
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_sqlalchemy\pagination.py", line 72, in __init__
+    items = self._query_items()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_sqlalchemy\pagination.py", line 358, in _query_items
+    out = query.limit(self.per_page).offset(self._query_offset).all()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\orm\query.py", line 2673, in all
+    return self._iter().all()  # type: ignore
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 1769, in all
+    return self._allrows()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 548, in _allrows
+    rows = self._fetchall_impl()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 1676, in _fetchall_impl
+    return self._real_result._fetchall_impl()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 2270, in _fetchall_impl
+    return list(self.iterator)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\orm\loading.py", line 219, in chunks
+    fetch = cursor._raw_all_rows()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 541, in _raw_all_rows
+    return [make_row(row) for row in rows]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 541, in <listcomp>
+    return [make_row(row) for row in rows]
+  File "lib\\sqlalchemy\\cyextension\\resultproxy.pyx", line 22, in sqlalchemy.cyextension.resultproxy.BaseRow.__init__
+  File "lib\\sqlalchemy\\cyextension\\resultproxy.pyx", line 79, in sqlalchemy.cyextension.resultproxy._apply_processors
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1729, in process
+    value = self._object_value_for_elem(value)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1611, in _object_value_for_elem
+    raise LookupError(
+LookupError: 'scheduled' is not among the defined enum values. Enum name: electionstatus. Possible values: DRAFT, SCHEDULED, ACTIVE, ..., COMPLETED
+2026-05-21 14:25:33,275 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-21 14:30:17,675 - app - ERROR - Exception on /api/elections/ [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1609, in _object_value_for_elem
+    return self._object_lookup[elem]
+KeyError: 'scheduled'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\elections.py", line 60, in list_elections
+    pagination = query.order_by(Election.start_date.desc()).paginate(
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_sqlalchemy\query.py", line 98, in paginate
+    return QueryPagination(
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_sqlalchemy\pagination.py", line 72, in __init__
+    items = self._query_items()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_sqlalchemy\pagination.py", line 358, in _query_items
+    out = query.limit(self.per_page).offset(self._query_offset).all()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\orm\query.py", line 2673, in all
+    return self._iter().all()  # type: ignore
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 1769, in all
+    return self._allrows()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 548, in _allrows
+    rows = self._fetchall_impl()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 1676, in _fetchall_impl
+    return self._real_result._fetchall_impl()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 2270, in _fetchall_impl
+    return list(self.iterator)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\orm\loading.py", line 219, in chunks
+    fetch = cursor._raw_all_rows()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 541, in _raw_all_rows
+    return [make_row(row) for row in rows]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 541, in <listcomp>
+    return [make_row(row) for row in rows]
+  File "lib\\sqlalchemy\\cyextension\\resultproxy.pyx", line 22, in sqlalchemy.cyextension.resultproxy.BaseRow.__init__
+  File "lib\\sqlalchemy\\cyextension\\resultproxy.pyx", line 79, in sqlalchemy.cyextension.resultproxy._apply_processors
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1729, in process
+    value = self._object_value_for_elem(value)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1611, in _object_value_for_elem
+    raise LookupError(
+LookupError: 'scheduled' is not among the defined enum values. Enum name: electionstatus. Possible values: DRAFT, SCHEDULED, ACTIVE, ..., COMPLETED
+2026-05-21 14:30:17,683 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-21 14:30:17,690 - app - ERROR - Exception on /api/elections/ [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1609, in _object_value_for_elem
+    return self._object_lookup[elem]
+KeyError: 'scheduled'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\elections.py", line 60, in list_elections
+    pagination = query.order_by(Election.start_date.desc()).paginate(
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_sqlalchemy\query.py", line 98, in paginate
+    return QueryPagination(
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_sqlalchemy\pagination.py", line 72, in __init__
+    items = self._query_items()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_sqlalchemy\pagination.py", line 358, in _query_items
+    out = query.limit(self.per_page).offset(self._query_offset).all()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\orm\query.py", line 2673, in all
+    return self._iter().all()  # type: ignore
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 1769, in all
+    return self._allrows()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 548, in _allrows
+    rows = self._fetchall_impl()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 1676, in _fetchall_impl
+    return self._real_result._fetchall_impl()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 2270, in _fetchall_impl
+    return list(self.iterator)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\orm\loading.py", line 219, in chunks
+    fetch = cursor._raw_all_rows()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 541, in _raw_all_rows
+    return [make_row(row) for row in rows]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 541, in <listcomp>
+    return [make_row(row) for row in rows]
+  File "lib\\sqlalchemy\\cyextension\\resultproxy.pyx", line 22, in sqlalchemy.cyextension.resultproxy.BaseRow.__init__
+  File "lib\\sqlalchemy\\cyextension\\resultproxy.pyx", line 79, in sqlalchemy.cyextension.resultproxy._apply_processors
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1729, in process
+    value = self._object_value_for_elem(value)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1611, in _object_value_for_elem
+    raise LookupError(
+LookupError: 'scheduled' is not among the defined enum values. Enum name: electionstatus. Possible values: DRAFT, SCHEDULED, ACTIVE, ..., COMPLETED
+2026-05-21 14:30:17,697 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-22 17:12:04,671 - app.routes.admin - ERROR - Error getting recent elections: 'general' is not among the defined enum values. Enum name: electiontype. Possible values: NATIONAL, STATE, DISTRICT, ..., COMMITTEE
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1609, in _object_value_for_elem
+    return self._object_lookup[elem]
+KeyError: 'general'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\admin.py", line 847, in get_recent_elections
+    recent_elections = Election.query.order_by(Election.created_at.desc()).limit(limit).all()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\orm\query.py", line 2673, in all
+    return self._iter().all()  # type: ignore
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 1769, in all
+    return self._allrows()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 548, in _allrows
+    rows = self._fetchall_impl()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 1676, in _fetchall_impl
+    return self._real_result._fetchall_impl()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 2270, in _fetchall_impl
+    return list(self.iterator)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\orm\loading.py", line 219, in chunks
+    fetch = cursor._raw_all_rows()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 541, in _raw_all_rows
+    return [make_row(row) for row in rows]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 541, in <listcomp>
+    return [make_row(row) for row in rows]
+  File "lib\\sqlalchemy\\cyextension\\resultproxy.pyx", line 22, in sqlalchemy.cyextension.resultproxy.BaseRow.__init__
+  File "lib\\sqlalchemy\\cyextension\\resultproxy.pyx", line 79, in sqlalchemy.cyextension.resultproxy._apply_processors
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1729, in process
+    value = self._object_value_for_elem(value)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1611, in _object_value_for_elem
+    raise LookupError(
+LookupError: 'general' is not among the defined enum values. Enum name: electiontype. Possible values: NATIONAL, STATE, DISTRICT, ..., COMMITTEE
+2026-05-22 17:12:04,725 - app.routes.admin - ERROR - Error getting recent elections: 'general' is not among the defined enum values. Enum name: electiontype. Possible values: NATIONAL, STATE, DISTRICT, ..., COMMITTEE
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1609, in _object_value_for_elem
+    return self._object_lookup[elem]
+KeyError: 'general'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\admin.py", line 847, in get_recent_elections
+    recent_elections = Election.query.order_by(Election.created_at.desc()).limit(limit).all()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\orm\query.py", line 2673, in all
+    return self._iter().all()  # type: ignore
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 1769, in all
+    return self._allrows()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 548, in _allrows
+    rows = self._fetchall_impl()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 1676, in _fetchall_impl
+    return self._real_result._fetchall_impl()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 2270, in _fetchall_impl
+    return list(self.iterator)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\orm\loading.py", line 219, in chunks
+    fetch = cursor._raw_all_rows()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 541, in _raw_all_rows
+    return [make_row(row) for row in rows]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 541, in <listcomp>
+    return [make_row(row) for row in rows]
+  File "lib\\sqlalchemy\\cyextension\\resultproxy.pyx", line 22, in sqlalchemy.cyextension.resultproxy.BaseRow.__init__
+  File "lib\\sqlalchemy\\cyextension\\resultproxy.pyx", line 79, in sqlalchemy.cyextension.resultproxy._apply_processors
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1729, in process
+    value = self._object_value_for_elem(value)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1611, in _object_value_for_elem
+    raise LookupError(
+LookupError: 'general' is not among the defined enum values. Enum name: electiontype. Possible values: NATIONAL, STATE, DISTRICT, ..., COMMITTEE
+2026-05-22 17:12:47,005 - app.routes.admin - ERROR - Error updating election 054b7b5a-53a3-4332-a3ea-c0e4562b1604: AuthService.create_audit_log() got an unexpected keyword argument 'extra_metadata'
+Traceback (most recent call last):
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\admin.py", line 1124, in update_election
+    AuthService.create_audit_log(
+TypeError: AuthService.create_audit_log() got an unexpected keyword argument 'extra_metadata'
+2026-05-22 17:13:00,843 - app.routes.admin - ERROR - Error getting recent elections: 'general' is not among the defined enum values. Enum name: electiontype. Possible values: NATIONAL, STATE, DISTRICT, ..., COMMITTEE
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1609, in _object_value_for_elem
+    return self._object_lookup[elem]
+KeyError: 'general'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\admin.py", line 847, in get_recent_elections
+    recent_elections = Election.query.order_by(Election.created_at.desc()).limit(limit).all()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\orm\query.py", line 2673, in all
+    return self._iter().all()  # type: ignore
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 1769, in all
+    return self._allrows()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 548, in _allrows
+    rows = self._fetchall_impl()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 1676, in _fetchall_impl
+    return self._real_result._fetchall_impl()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 2270, in _fetchall_impl
+    return list(self.iterator)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\orm\loading.py", line 219, in chunks
+    fetch = cursor._raw_all_rows()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 541, in _raw_all_rows
+    return [make_row(row) for row in rows]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 541, in <listcomp>
+    return [make_row(row) for row in rows]
+  File "lib\\sqlalchemy\\cyextension\\resultproxy.pyx", line 22, in sqlalchemy.cyextension.resultproxy.BaseRow.__init__
+  File "lib\\sqlalchemy\\cyextension\\resultproxy.pyx", line 79, in sqlalchemy.cyextension.resultproxy._apply_processors
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1729, in process
+    value = self._object_value_for_elem(value)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1611, in _object_value_for_elem
+    raise LookupError(
+LookupError: 'general' is not among the defined enum values. Enum name: electiontype. Possible values: NATIONAL, STATE, DISTRICT, ..., COMMITTEE
+2026-05-22 17:13:00,876 - app.routes.admin - ERROR - Error getting recent elections: 'general' is not among the defined enum values. Enum name: electiontype. Possible values: NATIONAL, STATE, DISTRICT, ..., COMMITTEE
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1609, in _object_value_for_elem
+    return self._object_lookup[elem]
+KeyError: 'general'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\admin.py", line 847, in get_recent_elections
+    recent_elections = Election.query.order_by(Election.created_at.desc()).limit(limit).all()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\orm\query.py", line 2673, in all
+    return self._iter().all()  # type: ignore
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 1769, in all
+    return self._allrows()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 548, in _allrows
+    rows = self._fetchall_impl()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 1676, in _fetchall_impl
+    return self._real_result._fetchall_impl()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 2270, in _fetchall_impl
+    return list(self.iterator)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\orm\loading.py", line 219, in chunks
+    fetch = cursor._raw_all_rows()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 541, in _raw_all_rows
+    return [make_row(row) for row in rows]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\engine\result.py", line 541, in <listcomp>
+    return [make_row(row) for row in rows]
+  File "lib\\sqlalchemy\\cyextension\\resultproxy.pyx", line 22, in sqlalchemy.cyextension.resultproxy.BaseRow.__init__
+  File "lib\\sqlalchemy\\cyextension\\resultproxy.pyx", line 79, in sqlalchemy.cyextension.resultproxy._apply_processors
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1729, in process
+    value = self._object_value_for_elem(value)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\sqltypes.py", line 1611, in _object_value_for_elem
+    raise LookupError(
+LookupError: 'general' is not among the defined enum values. Enum name: electiontype. Possible values: NATIONAL, STATE, DISTRICT, ..., COMMITTEE
+2026-05-22 17:13:16,848 - app.routes.admin - ERROR - Error updating candidate: CANDIDATE_UPDATED
+Traceback (most recent call last):
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\admin.py", line 1541, in update_candidate
+    action=AuditAction.CANDIDATE_UPDATED,
+  File "C:\Program Files\Python310\lib\enum.py", line 429, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: CANDIDATE_UPDATED
+2026-05-22 17:13:31,584 - app.routes.admin - ERROR - Error updating candidate: CANDIDATE_UPDATED
+Traceback (most recent call last):
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\admin.py", line 1541, in update_candidate
+    action=AuditAction.CANDIDATE_UPDATED,
+  File "C:\Program Files\Python310\lib\enum.py", line 429, in __getattr__
+    raise AttributeError(name) from None
+AttributeError: CANDIDATE_UPDATED
+2026-05-22 17:14:53,661 - app - ERROR - Exception on /api/results/elections/undefined [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\results.py", line 18, in get_results
+    results, message = VotingService.get_election_results(election_id)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\services\voting_service.py", line 205, in get_election_results
+    from app.models.election import Position
+ImportError: cannot import name 'Position' from 'app.models.election' (C:\Users\USER\Documents\apps\ican-voting-system\backend\app\models\election.py)
+2026-05-22 17:14:53,672 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-22 17:14:53,676 - app - ERROR - Exception on /api/results/elections/undefined [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\results.py", line 18, in get_results
+    results, message = VotingService.get_election_results(election_id)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\services\voting_service.py", line 205, in get_election_results
+    from app.models.election import Position
+ImportError: cannot import name 'Position' from 'app.models.election' (C:\Users\USER\Documents\apps\ican-voting-system\backend\app\models\election.py)
+2026-05-22 17:14:53,677 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-23 07:28:11,641 - app - ERROR - Exception on /api/results/elections/undefined [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\results.py", line 18, in get_results
+    results, message = VotingService.get_election_results(election_id)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\services\voting_service.py", line 205, in get_election_results
+    from app.models.election import Position
+ImportError: cannot import name 'Position' from 'app.models.election' (C:\Users\USER\Documents\apps\ican-voting-system\backend\app\models\election.py)
+2026-05-23 07:28:11,652 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-23 07:28:11,657 - app - ERROR - Exception on /api/results/elections/undefined [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\results.py", line 18, in get_results
+    results, message = VotingService.get_election_results(election_id)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\services\voting_service.py", line 205, in get_election_results
+    from app.models.election import Position
+ImportError: cannot import name 'Position' from 'app.models.election' (C:\Users\USER\Documents\apps\ican-voting-system\backend\app\models\election.py)
+2026-05-23 07:28:11,659 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-23 07:46:48,418 - app - ERROR - Exception on /api/results/elections/undefined [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\results.py", line 18, in get_results
+    results, message = VotingService.get_election_results(election_id)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\services\voting_service.py", line 205, in get_election_results
+    from app.models.election import Position
+ImportError: cannot import name 'Position' from 'app.models.election' (C:\Users\USER\Documents\apps\ican-voting-system\backend\app\models\election.py)
+2026-05-23 07:46:48,423 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-23 07:46:48,429 - app - ERROR - Exception on /api/results/elections/undefined [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\results.py", line 18, in get_results
+    results, message = VotingService.get_election_results(election_id)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\services\voting_service.py", line 205, in get_election_results
+    from app.models.election import Position
+ImportError: cannot import name 'Position' from 'app.models.election' (C:\Users\USER\Documents\apps\ican-voting-system\backend\app\models\election.py)
+2026-05-23 07:46:48,431 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-23 07:59:01,786 - app - ERROR - Exception on /api/results/elections/undefined [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\results.py", line 18, in get_results
+    results, message = VotingService.get_election_results(election_id)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\services\voting_service.py", line 205, in get_election_results
+    from app.models.election import Position
+ImportError: cannot import name 'Position' from 'app.models.election' (C:\Users\USER\Documents\apps\ican-voting-system\backend\app\models\election.py)
+2026-05-23 07:59:01,790 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-23 07:59:01,795 - app - ERROR - Exception on /api/results/elections/undefined [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\results.py", line 18, in get_results
+    results, message = VotingService.get_election_results(election_id)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\services\voting_service.py", line 205, in get_election_results
+    from app.models.election import Position
+ImportError: cannot import name 'Position' from 'app.models.election' (C:\Users\USER\Documents\apps\ican-voting-system\backend\app\models\election.py)
+2026-05-23 07:59:01,797 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-23 09:23:03,820 - app.routes.admin - ERROR - Error resetting votes: AuthService.create_audit_log() got an unexpected keyword argument 'extra_metadata'
+Traceback (most recent call last):
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\admin.py", line 1329, in reset_all_votes
+    AuthService.create_audit_log(
+TypeError: AuthService.create_audit_log() got an unexpected keyword argument 'extra_metadata'
+2026-05-23 09:23:09,590 - app.routes.admin - ERROR - Error resetting votes: AuthService.create_audit_log() got an unexpected keyword argument 'extra_metadata'
+Traceback (most recent call last):
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\admin.py", line 1329, in reset_all_votes
+    AuthService.create_audit_log(
+TypeError: AuthService.create_audit_log() got an unexpected keyword argument 'extra_metadata'
+2026-05-23 09:29:51,453 - app.routes.admin - ERROR - Error resetting votes: AuthService.create_audit_log() got an unexpected keyword argument 'changes'
+Traceback (most recent call last):
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\admin.py", line 1329, in reset_all_votes
+    AuthService.create_audit_log(
+TypeError: AuthService.create_audit_log() got an unexpected keyword argument 'changes'
+2026-05-23 09:34:56,408 - app - ERROR - Exception on /api/results/elections/undefined [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\results.py", line 18, in get_results
+    results, message = VotingService.get_election_results(election_id)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\services\voting_service.py", line 205, in get_election_results
+    from app.models.election import Position
+ImportError: cannot import name 'Position' from 'app.models.election' (C:\Users\USER\Documents\apps\ican-voting-system\backend\app\models\election.py)
+2026-05-23 09:34:56,414 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-23 09:34:56,418 - app - ERROR - Exception on /api/results/elections/undefined [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\results.py", line 18, in get_results
+    results, message = VotingService.get_election_results(election_id)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\services\voting_service.py", line 205, in get_election_results
+    from app.models.election import Position
+ImportError: cannot import name 'Position' from 'app.models.election' (C:\Users\USER\Documents\apps\ican-voting-system\backend\app\models\election.py)
+2026-05-23 09:34:56,420 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-23 09:39:26,110 - app.routes.admin - ERROR - Error resetting votes: AuthService.create_audit_log() got an unexpected keyword argument 'changes'
+Traceback (most recent call last):
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\admin.py", line 1364, in reset_all_votes
+    AuthService.create_audit_log(
+TypeError: AuthService.create_audit_log() got an unexpected keyword argument 'changes'
+2026-05-23 09:39:31,273 - app.routes.admin - ERROR - Error resetting votes: AuthService.create_audit_log() got an unexpected keyword argument 'changes'
+Traceback (most recent call last):
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\admin.py", line 1364, in reset_all_votes
+    AuthService.create_audit_log(
+TypeError: AuthService.create_audit_log() got an unexpected keyword argument 'changes'
+2026-05-23 10:18:39,924 - app - ERROR - Exception on /api/results/elections/undefined [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\results.py", line 18, in get_results
+    results, message = VotingService.get_election_results(election_id)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\services\voting_service.py", line 205, in get_election_results
+    from app.models.election import Position
+ImportError: cannot import name 'Position' from 'app.models.election' (C:\Users\USER\Documents\apps\ican-voting-system\backend\app\models\election.py)
+2026-05-23 10:18:39,929 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-23 10:18:39,937 - app - ERROR - Exception on /api/results/elections/undefined [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\results.py", line 18, in get_results
+    results, message = VotingService.get_election_results(election_id)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\services\voting_service.py", line 205, in get_election_results
+    from app.models.election import Position
+ImportError: cannot import name 'Position' from 'app.models.election' (C:\Users\USER\Documents\apps\ican-voting-system\backend\app\models\election.py)
+2026-05-23 10:18:39,946 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-23 10:40:20,296 - app - ERROR - Exception on /api/results/elections/undefined [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\results.py", line 18, in get_results
+    results, message = VotingService.get_election_results(election_id)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\services\voting_service.py", line 205, in get_election_results
+    from app.models.election import Position
+ImportError: cannot import name 'Position' from 'app.models.election' (C:\Users\USER\Documents\apps\ican-voting-system\backend\app\models\election.py)
+2026-05-23 10:40:20,303 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-23 10:40:20,307 - app - ERROR - Exception on /api/results/elections/undefined [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\results.py", line 18, in get_results
+    results, message = VotingService.get_election_results(election_id)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\services\voting_service.py", line 205, in get_election_results
+    from app.models.election import Position
+ImportError: cannot import name 'Position' from 'app.models.election' (C:\Users\USER\Documents\apps\ican-voting-system\backend\app\models\election.py)
+2026-05-23 10:40:20,309 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-23 10:58:11,866 - app - ERROR - Exception on /api/results/elections/undefined [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\results.py", line 18, in get_results
+    results, message = VotingService.get_election_results(election_id)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\services\voting_service.py", line 205, in get_election_results
+    from app.models.election import Position
+ImportError: cannot import name 'Position' from 'app.models.election' (C:\Users\USER\Documents\apps\ican-voting-system\backend\app\models\election.py)
+2026-05-23 10:58:11,874 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-23 10:58:11,879 - app - ERROR - Exception on /api/results/elections/undefined [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\results.py", line 18, in get_results
+    results, message = VotingService.get_election_results(election_id)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\services\voting_service.py", line 205, in get_election_results
+    from app.models.election import Position
+ImportError: cannot import name 'Position' from 'app.models.election' (C:\Users\USER\Documents\apps\ican-voting-system\backend\app\models\election.py)
+2026-05-23 10:58:11,882 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-23 12:10:53,229 - app - ERROR - Exception on /api/results/elections/undefined [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\results.py", line 18, in get_results
+    results, message = VotingService.get_election_results(election_id)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\services\voting_service.py", line 205, in get_election_results
+    from app.models.election import Position
+ImportError: cannot import name 'Position' from 'app.models.election' (C:\Users\USER\Documents\apps\ican-voting-system\backend\app\models\election.py)
+2026-05-23 12:10:53,235 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-23 12:10:53,242 - app - ERROR - Exception on /api/results/elections/undefined [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\results.py", line 18, in get_results
+    results, message = VotingService.get_election_results(election_id)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\services\voting_service.py", line 205, in get_election_results
+    from app.models.election import Position
+ImportError: cannot import name 'Position' from 'app.models.election' (C:\Users\USER\Documents\apps\ican-voting-system\backend\app\models\election.py)
+2026-05-23 12:10:53,248 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-23 12:14:00,875 - app - ERROR - Exception on /api/results/elections/undefined [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\results.py", line 18, in get_results
+    results, message = VotingService.get_election_results(election_id)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\services\voting_service.py", line 205, in get_election_results
+    from app.models.election import Position
+ImportError: cannot import name 'Position' from 'app.models.election' (C:\Users\USER\Documents\apps\ican-voting-system\backend\app\models\election.py)
+2026-05-23 12:14:00,879 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-23 12:14:00,884 - app - ERROR - Exception on /api/results/elections/undefined [GET]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\results.py", line 18, in get_results
+    results, message = VotingService.get_election_results(election_id)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\services\voting_service.py", line 205, in get_election_results
+    from app.models.election import Position
+ImportError: cannot import name 'Position' from 'app.models.election' (C:\Users\USER\Documents\apps\ican-voting-system\backend\app\models\election.py)
+2026-05-23 12:14:00,887 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-24 16:44:35,291 - app - ERROR - Exception on /api/admin/users/1d6dd103-da79-442e-a794-c50fdf43f83c [DELETE]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\base.py", line 2181, in _entity_namespace_key
+    return getattr(ns, key)  # type: ignore
+AttributeError: type object 'Vote' has no attribute 'user_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\admin.py", line 470, in delete_user
+    votes = Vote.query.filter_by(user_id=user_id).all()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\orm\query.py", line 1983, in filter_by
+    clauses = [
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\orm\query.py", line 1984, in <listcomp>
+    _entity_namespace_key(from_entity, key) == value
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\base.py", line 2183, in _entity_namespace_key
+    raise exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Entity namespace for "votes" has no property "user_id"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\admin.py", line 37, in wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\admin.py", line 507, in delete_user
+    return jsonify({'success': False, 'message': f'Error deleting user: {str(e)}'}), 500@admin_bp.route('/users/<user_id>', methods=['DELETE'])
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\sansio\scaffold.py", line 46, in wrapper_func
+    self._check_setup_finished(f_name)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\sansio\blueprints.py", line 215, in _check_setup_finished
+    raise AssertionError(
+AssertionError: The setup method 'route' can no longer be called on the blueprint 'admin'. It has already been registered at least once, any changes will not be applied consistently.
+Make sure all imports, decorators, functions, etc. needed to set up the blueprint are done before registering it.
+2026-05-24 16:44:35,299 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-05-24 16:50:47,560 - app - ERROR - Exception on /api/admin/users/1d6dd103-da79-442e-a794-c50fdf43f83c [DELETE]
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\base.py", line 2181, in _entity_namespace_key
+    return getattr(ns, key)  # type: ignore
+AttributeError: type object 'Vote' has no attribute 'user_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\admin.py", line 470, in delete_user
+    votes = Vote.query.filter_by(user_id=user_id).all()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\orm\query.py", line 1983, in filter_by
+    clauses = [
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\orm\query.py", line 1984, in <listcomp>
+    _entity_namespace_key(from_entity, key) == value
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\sqlalchemy\sql\base.py", line 2183, in _entity_namespace_key
+    raise exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Entity namespace for "votes" has no property "user_id"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\admin.py", line 37, in wrapper
+    return fn(*args, **kwargs)
+  File "C:\Users\USER\Documents\apps\ican-voting-system\backend\app\routes\admin.py", line 507, in delete_user
+    return jsonify({'success': False, 'message': f'Error deleting user: {str(e)}'}), 500@admin_bp.route('/users/<user_id>', methods=['DELETE'])
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\sansio\scaffold.py", line 46, in wrapper_func
+    self._check_setup_finished(f_name)
+  File "C:\Users\USER\AppData\Roaming\Python\Python310\site-packages\flask\sansio\blueprints.py", line 215, in _check_setup_finished
+    raise AssertionError(
+AssertionError: The setup method 'route' can no longer be called on the blueprint 'admin'. It has already been registered at least once, any changes will not be applied consistently.
+Make sure all imports, decorators, functions, etc. needed to set up the blueprint are done before registering it.
+2026-05-24 16:50:47,566 - app - ERROR - Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.

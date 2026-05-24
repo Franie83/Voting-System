@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" id="favicon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" id="apple-touch-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ICAN Secure Electronic Voting and Election Management System" />
+    <meta name="theme-color" content="#1a365d" />
+    <title>ICAN Electronic Voting System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Dynamically load favicon from backend
+      (function() {
+        fetch('/api/admin/system-icon')
+          .then(res => res.json())
+          .then(data => {
+            if (data.success && data.data?.icon_url) {
+              // Update standard favicon
+              const favicon = document.getElementById('favicon');
+              if (favicon) {
+                favicon.href = data.data.icon_url;
+              }
+              // Also create/update apple touch icon
+              let appleIcon = document.getElementById('apple-touch-icon');
+              if (!appleIcon) {
+                appleIcon = document.createElement('link');
+                appleIcon.id = 'apple-touch-icon';
+                appleIcon.rel = 'apple-touch-icon';
+                document.head.appendChild(appleIcon);
+              }
+              appleIcon.href = data.data.icon_url;
+              console.log('Favicon updated to:', data.data.icon_url);
+            }
+          })
+          .catch(err => console.error('Failed to load favicon:', err));
+      })();
+    </script>
+  </body>
+</html>
