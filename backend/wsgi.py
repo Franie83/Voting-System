@@ -94,8 +94,10 @@ socketio_app = socketio  # For SocketIO server
 
 if __name__ == '__main__':
     # When run directly, use SocketIO server for development
-    host = os.environ.get('FLASK_HOST', '127.0.0.1')
-    port = int(os.environ.get('FLASK_PORT', 8080))
+    # IMPORTANT: For Render deployment, bind to 0.0.0.0 to accept external connections
+    # and use the PORT environment variable provided by Render
+    host = os.environ.get('FLASK_HOST', '0.0.0.0')  # Changed from 127.0.0.1 to 0.0.0.0
+    port = int(os.environ.get('PORT', 8080))        # Changed from FLASK_PORT to PORT
     
     print("=" * 60)
     print("🗳️  ICAN Voting System - WSGI Server")
