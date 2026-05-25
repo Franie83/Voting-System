@@ -61,20 +61,22 @@ def create_super_admin_if_not_exists():
     
     # Write password to a secure file (first run only)
     password_file = os.path.join(os.path.dirname(__file__), '../../', 'admin_credentials.txt')
-    with open(password_file, 'w') as f:
-        f.write(f"SUPER ADMIN CREDENTIALS - SAVE THIS IMMEDIATELY\n")
-        f.write(f"="*50 + "\n")
-        f.write(f"Email: admin@ican.gov.ng\n")
-        f.write(f"Temporary Password: {temp_password}\n")
-        f.write(f"="*50 + "\n")
-        f.write(f"Please change this password after first login!\n")
-        f.write(f"\nFirst login URL: http://localhost:3000/first-login\n")
+    try:
+        with open(password_file, 'w') as f:
+            f.write(f"SUPER ADMIN CREDENTIALS - SAVE THIS IMMEDIATELY\n")
+            f.write(f"="*50 + "\n")
+            f.write(f"Email: admin@ican.gov.ng\n")
+            f.write(f"Temporary Password: {temp_password}\n")
+            f.write(f"="*50 + "\n")
+            f.write(f"Please change this password after first login!\n")
+            f.write(f"\nFirst login URL: https://ican-voting-frontend.onrender.com/first-login\n")
+    except:
+        pass
     
     print(f"\n{'='*60}")
     print("✅ SUPER ADMIN CREATED!")
     print(f"   Email: admin@ican.gov.ng")
     print(f"   Temporary Password: {temp_password}")
-    print(f"   Credentials saved to: admin_credentials.txt")
     print(f"{'='*60}\n")
     
     return admin
@@ -87,6 +89,9 @@ def create_app(config_name=None):
     app = Flask(__name__)
     app.config.from_object(config_by_name[config_name])
     
+    # Get Render frontend URL from environment or use default
+    render_frontend_url = os.environ.get('FRONTEND_URL', 'https://ican-voting-frontend.onrender.com')
+    
     # Initialize extensions
     db.init_app(app)
     migrate.init_app(app, db)
@@ -94,20 +99,31 @@ def create_app(config_name=None):
     mail.init_app(app)
     socketio.init_app(app)
     
-    # CORS configuration - SIMPLE AND CLEAN
+    # CORS configuration - Allow both localhost and Render frontend
+    allowed_origins = [
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+        render_frontend_url,
+        "https://ican-voting-frontend.onrender.com"
+    ]
+    
     CORS(app, 
-         origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+         origins=allowed_origins,
          methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
          allow_headers=["Authorization", "Content-Type", "Accept", "X-Requested-With"],
          supports_credentials=True,
          max_age=86400)
     
-    # Handle preflight requests manually (ensure OPTIONS responses)
+    # Handle preflight requests manually
     @app.before_request
     def handle_preflight():
         if request.method == "OPTIONS":
             response = jsonify({'success': True})
-            response.headers.add('Access-Control-Allow-Origin', 'http://localhost:3000')
+            origin = request.headers.get('Origin', '')
+            if origin in allowed_origins:
+                response.headers.add('Access-Control-Allow-Origin', origin)
+            else:
+                response.headers.add('Access-Control-Allow-Origin', '*')
             response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization,Accept,X-Requested-With')
             response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS')
             response.headers.add('Access-Control-Allow-Credentials', 'true')
@@ -238,4 +254,4 @@ def create_app(config_name=None):
 
 
 # Import models for SQLAlchemy
-from app.models import User, Election, Candidate, Vote, AuditLog, Notification, Position
+from app.models import User, Election, Candidate, Vote, AuditLog, Notification, Position, SystemConfig
